@@ -20,8 +20,8 @@ export default class Producto{
     }
 
 }
-const p = new Producto("p",15000,"p",10);
-const w = new Producto("w",15000,"w",0);
+// const p = new Producto("p",15000,"p",10);
+// const w = new Producto("w",15000,"w",0);
 // p.ficha();
 // w.ficha();
 // p.hayStock();

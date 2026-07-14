@@ -1,5 +1,7 @@
-import {email} from "./usuario";
-import {precio} from "./productos";
+import productos, {producto} from './producto.js';
+import usurio,  {usuario} from './usuario.js';
+
+
 export default function formatearPrecoi(precio){
     return precio.totalString("es-CO",{
         style: "currency",
@@ -16,5 +18,5 @@ if(email.includes("@")){
 }
 export function calcularDescuento(precio,porcentaje){
    const descuento = precio * (porcentaje / 100);
-   return precio - descuento;
+    return precio - descuento;
 }
