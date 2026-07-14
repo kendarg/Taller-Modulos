@@ -1,9 +1,9 @@
-import productos, {producto} from './producto.js';
-import usurio,  {usuario} from './usuario.js';
+// import productos, {Producto} from "./productos.js";
+// import usurio,  {usuario} from "./usuario.js";
 
 
 export default function formatearPrecoi(precio){
-    return precio.totalString("es-CO",{
+    return precio.toLocaleString("es-CO",{
         style: "currency",
         currency: "COP",
         minimumFractionDigits: 0

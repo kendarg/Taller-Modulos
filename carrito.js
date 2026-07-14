@@ -1,7 +1,7 @@
-import formatearPrecoi,{calcularDescuento} from './utilidades';
+import formatearPrecoi,{calcularDescuento} from "./utilidades.js";
 export default class carrito{
     items =[];
-    agragar(producto,cantidad){
+    agregar(producto,cantidad){
         if(producto.hayStock(cantidad) === true){
             this.items.push({producto, cantidad});
             producto.stock -= cantidad;
@@ -14,9 +14,9 @@ export default class carrito{
     subtotal(){
         let totalSinDescuento = 0;
         for (let item of this.items) {
-           this.subtotal += item.producto.precio * item.precio;
-            return this.subtotal();
+          totalSinDescuento += item.producto.precio * item.precio;
         }
+        return totalSinDescuento;
     }
 
     total(esVip){
@@ -40,5 +40,3 @@ export default class carrito{
     
         
 }
-const c = new carrito();
-console.log(c.usuario);
