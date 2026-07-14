@@ -5,7 +5,7 @@ export default class Usuarios{
         this.esVip = esVip;
     }
     saludo(){
-      console.log(`Hola bien benido usuario: ${this.nombre}👤\nCorreo de Ingreso: ${this.email}✉️\nNivel de Cliente: ${this.esVip}💎\n------------`)}
+    console.log(`Hola bien benido usuario: ${this.nombre}👤\nCorreo de Ingreso: ${this.email}✉️\nNivel de Cliente: ${this.esVip}💎\n------------`)}
 }
 const p = new Usuarios("p","p","vip");
 // p.saludo();

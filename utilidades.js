@@ -1,17 +1,20 @@
+import {email} from "./usuario";
+import {precio} from "./productos";
 export default function formatearPrecoi(precio){
     return precio.totalString("es-CO",{
         style: "currency",
         currency: "COP",
-        minimumFactionDigits: 0
+        minimumFractionDigits: 0
     });
 }
-function esEmailValido(email){
+export function esEmailValido(email){
 if(email.includes("@")){
     return true;
 }else{
     return false;
 }
 }
-function calcularDescuento(precio,porcentaje){
-   return precio = precio * 1.19;
+export function calcularDescuento(precio,porcentaje){
+   const descuento = precio * (porcentaje / 100);
+   return precio - descuento;
 }
